@@ -1,4 +1,4 @@
-# Sharma & Associates - Jekyll Website
+# Lexbridge Solicitors - Jekyll Website
 
 A professional, responsive Jekyll website for a premier Indian law firm featuring modern design, smooth animations, and comprehensive practice area coverage.
 
@@ -29,7 +29,7 @@ A professional, responsive Jekyll website for a premier Indian law firm featurin
 1. **Clone the repository**
    ```bash
    git clone [your-repo-url]
-   cd sharma-associates
+   cd extracted-directory
    ```
 
 2. **Install dependencies**
@@ -173,7 +173,7 @@ google_analytics: "UA-XXXXXXXXX-X"
 ## File Structure
 
 ```
-sharma-associates/
+Lexbridge-Solicitors/
 ├── _config.yml              # Site configuration
 ├── Gemfile                  # Ruby dependencies
 ├── index.html               # Homepage
@@ -229,7 +229,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Support
 
 For support and customization services, contact:
-- Email: info@sharmaassociates.com
+- Email: info@lexbridgesolicitors.com
 - Phone: +91-124-4567890
 
 ---
