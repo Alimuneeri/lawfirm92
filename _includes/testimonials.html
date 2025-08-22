@@ -1,0 +1,49 @@
+<section id="testimonials" class="section-padding bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="section-header">
+                    <h2 class="section-title text-white">Client Testimonials</h2>
+                    <p class="section-description text-white-50">What our clients say about our legal services and expertise.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for testimonial in site.data.testimonials %}
+                        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <i class="fas fa-quote-left testimonial-quote"></i>
+                                    <p class="testimonial-text">{{ testimonial.text }}</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <h5 class="author-name">{{ testimonial.author }}</h5>
+                                    {% if testimonial.position %}
+                                    <p class="author-position">{{ testimonial.position }}</p>
+                                    {% endif %}
+                                    {% if testimonial.company %}
+                                    <p class="author-company">{{ testimonial.company }}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

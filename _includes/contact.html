@@ -1,0 +1,109 @@
+<section id="contact" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="section-header">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="section-description">Get in touch with our expert legal team for professional consultation.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <div class="contact-form-wrapper" data-aos="fade-right">
+                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="_replyto" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">Subject *</label>
+                                    <select class="form-control" id="subject" name="subject" required>
+                                        <option value="">Select a practice area</option>
+                                        {% for service in site.data.services %}
+                                        <option value="{{ service.title }}">{{ service.title }}</option>
+                                        {% endfor %}
+                                        <option value="General Inquiry">General Inquiry</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="contact-info" data-aos="fade-left">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Main Office</h5>
+                            <p>{{ site.data.contact.main_office.address }}</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Phone</h5>
+                            <p>{{ site.data.contact.main_office.phone }}</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Email</h5>
+                            <p>{{ site.data.contact.main_office.email }}</p>
+                        </div>
+                    </div>
+
+                    <div class="other-offices">
+                        <h5>Other Offices</h5>
+                        {% for office in site.data.contact.other_offices %}
+                        <div class="office-item">
+                            <strong>{{ office.city }}</strong><br>
+                            {{ office.address }}<br>
+                            {{ office.phone }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

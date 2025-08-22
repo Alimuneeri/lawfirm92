@@ -1,0 +1,81 @@
+<footer class="footer bg-dark text-white">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="footer-section">
+                    <h5 class="footer-title">{{ site.title }}</h5>
+                    <p class="footer-description">{{ site.description }}</p>
+                    <div class="social-links">
+                        {% if site.social.linkedin %}
+                        <a href="https://linkedin.com/{{ site.social.linkedin }}" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        {% endif %}
+                        {% if site.social.twitter %}
+                        <a href="https://twitter.com/{{ site.social.twitter }}" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        {% endif %}
+                        {% if site.social.youtube %}
+                        <a href="{{ site.social.youtube }}" target="_blank" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <div class="footer-section">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#awards">Awards</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="footer-section">
+                    <h6 class="footer-title">Practice Areas</h6>
+                    <ul class="footer-links">
+                        {% for service in site.data.services limit: 5 %}
+                        <li><a href="#services">{{ service.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="footer-section">
+                    <h6 class="footer-title">Contact Info</h6>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> {{ site.address }}</p>
+                        <p><i class="fas fa-phone"></i> {{ site.phone }}</p>
+                        <p><i class="fas fa-envelope"></i> {{ site.email }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="row">
+            <div class="col-md-6">
+                <p class="footer-copyright">
+                    &copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.
+                </p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="footer-legal">
+                    <a href="/privacy-policy">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="/terms-of-service">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

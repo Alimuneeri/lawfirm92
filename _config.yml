@@ -1,0 +1,52 @@
+# Site settings
+title: "Lexbridge Solicitors"
+subtitle: "Premier Law Firm"
+description: "Leading US law firm providing expert legal solutions across corporate law, private equity, banking & finance, and more."
+baseurl: ""
+url: "https://yourdomain.com"
+
+# Contact information
+email: info@lexbridgesolicitors.com
+phone: "+1-124-4567890"
+address: "Tower A, 14th Floor, DLF Cyber City, New York, California 122002, US"
+
+# Social media
+social:
+  linkedin: "company/Lexbridge-associates"
+  twitter: "Lexbridge"
+  youtube: "channel/UC123456789"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Default values
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Lexbridge & Associates"

@@ -1,0 +1,39 @@
+- title: "General Corporate"
+  description: "Comprehensive corporate legal solutions including mergers, acquisitions, joint ventures, and corporate governance."
+  icon: "fas fa-building"
+
+- title: "Private Equity"
+  description: "Strategic advisory for private equity transactions, fund formation, and investment structuring."
+  icon: "fas fa-chart-line"
+
+- title: "Banking & Finance"
+  description: "Expert guidance on banking regulations, structured finance, and financial services compliance."
+  icon: "fas fa-university"
+
+- title: "Insolvency & Restructuring"
+  description: "Specialized solutions for corporate restructuring, insolvency proceedings, and debt resolution."
+  icon: "fas fa-sync-alt"
+
+- title: "Competition Law"
+  description: "Antitrust compliance, merger clearances, and competition litigation services."
+  icon: "fas fa-balance-scale"
+
+- title: "Dispute Resolution"
+  description: "Litigation, arbitration, and mediation services for complex commercial disputes."
+  icon: "fas fa-gavel"
+
+- title: "Infrastructure, Energy and Project Finance"
+  description: "Legal support for infrastructure projects, energy sector transactions, and project financing."
+  icon: "fas fa-industry"
+
+- title: "Capital Markets"
+  description: "IPOs, debt offerings, regulatory compliance, and securities law expertise."
+  icon: "fas fa-chart-area"
+
+- title: "Tax"
+  description: "Comprehensive tax planning, compliance, and dispute resolution services."
+  icon: "fas fa-calculator"
+
+- title: "Intellectual Property"
+  description: "IP protection, licensing, enforcement, and technology transfer solutions."
+  icon: "fas fa-lightbulb"

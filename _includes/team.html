@@ -1,0 +1,44 @@
+<section id="team" class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="section-header">
+                    <h2 class="section-title">Our Expert Team</h2>
+                    <p class="section-description">Meet our distinguished lawyers who bring decades of experience and expertise to serve our clients.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            {% for member in site.data.team %}
+            <div class="col-lg-3 col-md-6">
+                <div class="team-card" data-aos="fade-up" data-aos-delay="{{ forloop.index | times: 100 }}">
+                    <div class="team-image">
+                        <img src="{{ member.image | default: '/assets/img/team/placeholder.jpg' }}" alt="{{ member.name }}" class="img-fluid">
+                        <div class="team-overlay">
+                            <div class="team-info">
+                                <h5>{{ member.name }}</h5>
+                                <p>{{ member.position }}</p>
+                                <div class="team-contact">
+                                    <a href="mailto:{{ member.email }}" class="btn btn-sm btn-outline-light">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-details">
+                        <h4 class="team-name">{{ member.name }}</h4>
+                        <p class="team-position">{{ member.position }}</p>
+                        <p class="team-specialization">{{ member.specialization }}</p>
+                        <span class="team-experience">{{ member.experience }}</span>
+                        {% if member.bio %}
+                        <p class="team-bio">{{ member.bio }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

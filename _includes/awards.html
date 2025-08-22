@@ -1,0 +1,32 @@
+<section id="awards" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="section-header">
+                    <h2 class="section-title">Awards & Recognition</h2>
+                    <p class="section-description">Our commitment to excellence has been recognized by prestigious legal organizations worldwide.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            {% for award in site.data.awards %}
+            <div class="col-lg-4">
+                <div class="award-card" data-aos="zoom-in" data-aos-delay="{{ forloop.index | times: 150 }}">
+                    <div class="award-logo">
+                        <img src="{{ award.logo | default: '/assets/img/awards/placeholder-logo.png' }}" alt="{{ award.organization }}" class="img-fluid">
+                    </div>
+                    <div class="award-content">
+                        <h4 class="award-title">{{ award.title }}</h4>
+                        <p class="award-organization">{{ award.organization }}</p>
+                        <span class="award-year">{{ award.year }}</span>
+                        {% if award.description %}
+                        <p class="award-description">{{ award.description }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

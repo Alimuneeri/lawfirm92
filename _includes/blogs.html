@@ -1,0 +1,58 @@
+<section id="blogs" class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="section-header">
+                    <h2 class="section-title">Latest Insights</h2>
+                    <p class="section-description">Stay updated with our latest legal insights and industry analysis.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            {% for post in site.posts limit: 3 %}
+            <div class="col-lg-4">
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="{{ forloop.index | times: 100 }}">
+                    {% if post.image %}
+                    <div class="blog-image">
+                        <img src="{{ post.image }}" alt="{{ post.title }}" class="img-fluid">
+                    </div>
+                    {% endif %}
+                    <div class="blog-content">
+                        {% if post.category %}
+                        <span class="blog-category">{{ post.category }}</span>
+                        {% endif %}
+                        <h4 class="blog-title">
+                            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                        </h4>
+                        <p class="blog-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                {{ post.date | date: "%B %d, %Y" }}
+                            </span>
+                            {% if post.author %}
+                            <span class="blog-author">
+                                <i class="fas fa-user"></i>
+                                {{ post.author }}
+                            </span>
+                            {% endif %}
+                        </div>
+                        <a href="{{ post.url | relative_url }}" class="blog-link">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <a href="/blog" class="btn btn-primary btn-lg">
+                    <i class="fas fa-book-open"></i> View All Articles
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

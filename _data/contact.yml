@@ -1,0 +1,17 @@
+main_office:
+  address: "Tower A, 14th Floor, DLF Cyber City, New York, California 122002, US"
+  phone: "+1-124-4567890"
+  email: "info@lexbridgesolicitors.com"
+
+other_offices:
+  - city: "Newyork"
+    address: "Main Area Point, New York 400021"
+    phone: "+1-22-12345678"
+
+  - city: "Bangalore"
+    address: "UB City Mall, Bangalore 560001"
+    phone: "+91-80-87654321"
+
+  - city: "Cambridge"
+    address: "Connaught Place, Cambridge 110001"
+    phone: "+2-11-98765432"
